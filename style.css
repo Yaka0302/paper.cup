@@ -1,0 +1,133 @@
+:root{
+  --pink:#ff78a6;
+  --sub:#ffe5ee;
+  --ink:#4e3a3f;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:"Hiragino Maru Gothic ProN","Yu Gothic",sans-serif;
+  background:linear-gradient(#fff9dd,#fff);
+  color:var(--ink);
+}
+header{
+  padding:18px;
+  text-align:center;
+  background:#fff3c9;
+  border-bottom:4px solid #ffd9e6;
+}
+h1{
+  margin:0;
+  color:#e83f7b;
+  font-size:clamp(32px,6vw,58px);
+}
+main{
+  max-width:1100px;
+  margin:auto;
+  padding:14px;
+}
+.panel{
+  background:#fff;
+  border:4px solid var(--sub);
+  border-radius:28px;
+  padding:18px;
+  margin:14px 0;
+  box-shadow:0 9px 25px #0001;
+}
+h2{
+  text-align:center;
+  color:#e75083;
+  font-size:clamp(27px,5vw,42px);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(135px,1fr));
+  gap:12px;
+}
+.craft{
+  border:4px solid var(--sub);
+  background:#fff;
+  border-radius:22px;
+  padding:14px;
+  font-size:22px;
+  font-weight:900;
+  cursor:pointer;
+}
+.craft span{
+  display:block;
+  font-size:50px;
+}
+.craft.selected{
+  border-color:var(--pink);
+  background:#fff0f5;
+}
+.steps{
+  font-size:21px;
+  line-height:1.9;
+  background:#fff8d6;
+  border-radius:20px;
+  padding:16px;
+}
+.actions{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin:18px 0;
+}
+.btn{
+  border:0;
+  border-radius:999px;
+  padding:17px 26px;
+  font-size:23px;
+  font-weight:900;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+}
+.pdf{background:#f39a45}
+.next{
+  background:var(--pink);
+  min-width:min(90vw,500px);
+  font-size:32px;
+}
+.music{background:#8c7bd5}
+.stop{background:#9995a6}
+.camera-panel{display:none}
+.camera-panel.open{display:block}
+.camera-frame{
+  width:100%;
+  aspect-ratio:16/10;
+  border:10px solid #ffd8e6;
+  border-radius:28px;
+  overflow:hidden;
+  background:#eaf7ff;
+}
+video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scaleX(-1);
+}
+.guide{
+  font-size:clamp(24px,4vw,36px);
+  font-weight:900;
+  text-align:center;
+  background:#fff;
+  border:4px solid #ffe174;
+  border-radius:22px;
+  padding:16px;
+  margin:14px;
+}
+@media(max-width:650px){
+  .camera-frame{aspect-ratio:3/4}
+}
+
+.pdf-note{
+  text-align:center;
+  font-size:18px;
+  line-height:1.7;
+  background:#fff8d6;
+  border-radius:16px;
+  padding:12px;
+}
