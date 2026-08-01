@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>おんがくこうさくらんど</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <h1>
+    <span class="pink">おんがく</span>
+    <span class="orange">こうさく</span>
+    <span class="blue">らんど</span>
+  </h1>
+  <p>つくって うごかして おんがくあそび♪</p>
+</header>
+
+<main>
+  <section class="panel mode-panel">
+    <h2>あそびかたを えらぼう</h2>
+    <div class="mode-grid">
+      <button class="mode selected" data-mode="normal">🌈<b>つうじょうばん</b><small>げんきな おと</small></button>
+      <button class="mode" data-mode="care">🌿<b>はいりょばん</b><small>やさしい おと・ゆっくり</small></button>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>6しゅるいから えらぼう</h2>
+    <div id="craftGrid" class="craft-grid"></div>
+  </section>
+
+  <section class="panel craft-panel">
+    <div class="craft-layout">
+      <div>
+        <h2 id="craftTitle"></h2>
+        <img id="finishedPhoto" class="finished-photo" alt="できあがりの しゃしん">
+      </div>
+      <div>
+        <h3>つくりかた</h3>
+        <ol id="steps" class="steps"></ol>
+        <a id="pdfLink" class="pdf-button" target="_blank" rel="noopener">📄 A4の かたがみPDFを ひらく</a>
+      </div>
+    </div>
+
+    <div class="finish-message">こうさくが おわったら<br>「つぎへ」を おしてね！</div>
+    <button id="nextBtn" class="next-button">つぎへ ▶</button>
+  </section>
+
+  <section id="cameraPanel" class="panel camera-panel">
+    <div class="camera-card">
+      <div class="decor">⭐ 🎵 🌈 🎵 ⭐</div>
+      <h2 id="cameraTitle"></h2>
+      <div class="camera-frame">
+        <video id="video" autoplay playsinline muted></video>
+        <span class="corner c1">🐰</span>
+        <span class="corner c2">🌸</span>
+        <span class="corner c3">⭐</span>
+        <span class="corner c4">🎵</span>
+      </div>
+      <div id="guide" class="guide">おんがくあそびが はじまるよ！</div>
+      <div class="camera-actions">
+        <button id="snapBtn" class="action orange">📸 しゃしん</button>
+        <button id="replayBtn" class="action purple">🔁 もういちど</button>
+        <button id="closeBtn" class="action gray">◀ こうさくへ もどる</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<audio id="bgm" src="audio/gentle_bgm.wav" loop preload="auto"></audio>
+<script src="app.js"></script>
+</body>
+</html>
